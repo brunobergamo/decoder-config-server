@@ -1,0 +1,31 @@
+server:
+  port: ${PORT}
+
+spring:
+  application:
+    name: ead-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/brunobergamo/decoder-config-server-repo
+          default-label : main
+
+encrypt:
+  key: PeShVmYq3t6w9z$B&E)H@McQfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5v8y/B?E(H
+
+ead:
+  configServer:
+    username:  ${CONFIG_SERVER_USERNAME}
+    password: ${CONFIG_SERVER_PASSWORD}
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  ${EUREKA_URL}
+  instance:
+    prefer-ip-address: true
+    hostname: ${APP_DOMAIN_NAME}
+    non-secure-port: 80
+
