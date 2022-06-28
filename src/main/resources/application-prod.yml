@@ -2,8 +2,6 @@ server:
   port: ${PORT}
 
 spring:
-  application:
-    name: ead-config-server
   cloud:
     config:
       server:
@@ -25,7 +23,6 @@ eureka:
     service-url:
       defaultZone:  ${EUREKA_URL}
   instance:
-    prefer-ip-address: true
     hostname: ${APP_DOMAIN_NAME}
     non-secure-port: 80
 
